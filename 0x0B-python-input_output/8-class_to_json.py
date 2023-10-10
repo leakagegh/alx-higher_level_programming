@@ -1,37 +1,15 @@
 #!/usr/bin/python3
-"""
-implementation of the 'class_to_json' function that returns a dictionary
-representing the JSON serialization of an object:
-"""
-
-'''
-File_Naime: 8-class_to_json.py
-Created Date: 10th of October, 2023
-Authur: Mohammed Awal Osman (Leakagegh)
-Size: Undefined
-Project Title: 0x0B-python-input_output
-Status: Submitted.
-'''
+"""Defines function that returns dictionary description."""
 
 
-class Student:
+def class_to_json(obj):
     """
-    # Write a class Student that defines a student by:
-    # VARIABLE(" "):
-    # To JSON(self): Student to JSON
-    # Return: Always 0. (Success)
-    """
-    """
-    The class_to_json function takes an object obj as input and returns a
-    JSON serializable dictionary representation of the object.
-    """
+    Serialize a Python object with serializable attributes to a dictionary.
 
-    """
-    The function first checks if the object is of type str, int, or bool.
-    If so, it directly returns the object since these types are already
-    JSON serializable.
-    """
+    Args:
+        obj: An instance of a class with serializable attributes.
 
-    def to_json(self, attrs=None):
-        if '__dict__' in dir(obj):
-            return obj.__dict__
+    Returns:
+        A dictionary representation of the object.
+    """
+    return obj.__dict__

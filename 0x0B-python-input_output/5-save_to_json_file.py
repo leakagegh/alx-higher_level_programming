@@ -1,35 +1,16 @@
-i#!/usr/bin/python3
-"""
-Function that writes an object to a text file using a JSON representation
-"""
+#!/usr/bin/python3
+"""Defines function that writes an object to a text file using JSON"""
 import json
-"""
-File_Naime: 5-save_to_json_file.py
-Created Date: 10th of October, 2023
-Authur: Mohammed Awal Osman (Leakagegh)
-Size: Undefined
-Project Title: 0x0B-python-input_output
-Status: Submitted.
-"""
 
 
 def save_to_json_file(my_obj, filename):
     """
-    # Write a function that writes an Object to a text file, using a JSON
-    # representation:
-    # Prototype: def from_json_string(my_str):
-    # VARIABLE(" "):
-    # from JSON(str): From JSON string to Object
-    # Return: Always 0. (Success)
+    Serialize and save an object to a JSON file.
+
+    :param my_obj: The object to be serialized and saved.
+    :type my_obj: object
+    :param filename: The name of the file to which the object will be saved.
+    :type filename: str
     """
-    """
-    The 'save_to_json_file' function is defined with two parameters: 'my_obj'
-    'which represents the object to be saved, and 'filename', which is the
-    name of the file to save the JSON representation of the object..
-    """
-    with open(filename, 'w') as file:
-        json.dump(my_obj, file)
-    """
-    The 'dump()' functoin takes two arguments: the object to be serialized
-    and the file obkject to write the JSON data tp.
-    """
+    with open(filename, 'w') as json_file:
+        json.dump(my_obj, json_file)
